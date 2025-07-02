@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Pawn Shop - Griffin GA | Fast Cash, Fair Deals</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Local pawn shop in Griffin offering fair cash loans, item buying, and layaway. Trusted for over 20 years.">
+    <meta name="keywords" content="pawn shop Griffin GA, cash loans Griffin, sell jewelry Griffin, pawn loans Georgia, layaway Griffin, local pawn shop, fast cash Griffin, gold buying Griffin, electronics pawn">
+    <meta name="author" content="Sam's Pawn Shop">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sam's Pawn Shop - Griffin GA | Fast Cash, Fair Deals">
+    <meta property="og:description" content="Your trusted local pawn shop in Griffin, Georgia for over 20 years. Get instant cash loans, sell items for top dollar, or use our layaway service.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://samspawnshopgriffin.com">
+    <meta property="og:image" content="https://samspawnshopgriffin.com/images/og-image.jpg">
+    <meta property="og:site_name" content="Sam's Pawn Shop">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sam's Pawn Shop - Griffin GA | Fast Cash, Fair Deals">
+    <meta name="twitter:description" content="Your trusted local pawn shop in Griffin, Georgia for over 20 years. Get instant cash loans, sell items for top dollar, or use our layaway service.">
+    <meta name="twitter:image" content="https://samspawnshopgriffin.com/images/twitter-image.jpg">
+    
+    <!-- Favicon and PWA -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#D4AF37">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'pawn-gold': '#D4AF37',
+                        'pawn-dark': '#1F2937',
+                        'pawn-light': '#F9FAFB',
+                        'pawn-accent': '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --primary-dark: #1F2937;
+            --primary-light: #F9FAFB;
+            --primary-accent: #F59E0B;
+            --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-heavy: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            transition: var(--transition);
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.8)), 
+                        url('https://upload.wikimedia.org/wikipedia/commons/2/21/Pawn_Shop_at_Sherman_Way_%26_Reseda_Blvd.%2C_Reseda%2C_CA.JPG');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dark .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                        url('https://upload.wikimedia.org/wikipedia/commons/2/21/Pawn_Shop_at_Sherman_Way_%26_Reseda_Blvd.%2C_Reseda%2C_CA.JPG');
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--primary-light);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-accent);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); 
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); 
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .animate-slide-in-right {
+            animation: slideInRight 0.4s ease-out;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.3s ease-out;
+        }
+        
+        .pulse-glow:hover {
+            animation: pulse-glow 2s infinite;
+        }
+
+        /* Dark mode toggle */
+        .theme-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: var(--primary-gold);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 26px;
+            height: 26px;
+            background: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .dark .theme-toggle::before {
+            transform: translateX(30px);
+        }
+
+
+
+        /* Card hover effects */
+        .card-hover {
+            transition: var(--transition);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Button animations */
+        .btn-primary {
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        /* Form styling */
+        .form-input {
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.02);
+        }
+
+        /* Responsive typography */
+        @media (max-width: 640px) {
+            .text-responsive {
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+            }
+        }
+
+        /* Touch-friendly mobile elements */
+        @media (max-width: 768px) {
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            /* Improve mobile spacing */
+            .mobile-spacing {
+                padding: 1rem;
+            }
+            
+            /* Better mobile typography */
+            .mobile-text {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            /* Mobile button improvements */
+            .mobile-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+                border-radius: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 transition-all duration-300">
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-lg fixed w-full z-50 border-b border-gray-200 transition-all duration-300 dark:bg-gray-800/95 dark:border-gray-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl md:text-3xl font-bold text-pawn-gold tracking-tight">
+                            <i class="fas fa-coins mr-2" aria-hidden="true"></i>Sam's Pawn
+                        </h1>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#home" class="text-pawn-dark hover:text-pawn-gold font-medium transition duration-300 relative group dark:text-gray-200">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pawn-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#services" class="text-pawn-dark hover:text-pawn-gold font-medium transition duration-300 relative group dark:text-gray-200">
+                        Services
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pawn-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="text-pawn-dark hover:text-pawn-gold font-medium transition duration-300 relative group dark:text-gray-200">
+                        About
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pawn-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="text-pawn-dark hover:text-pawn-gold font-medium transition duration-300 relative group dark:text-gray-200">
+                        Contact
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pawn-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <div class="flex items-center space-x-4">
+                        <button id="theme-toggle" class="theme-toggle touch-target" aria-label="Toggle dark mode">
+                            <i class="fas fa-sun absolute left-1 top-1 text-xs text-pawn-dark opacity-0 dark:opacity-100 transition-opacity duration-300"></i>
+                            <i class="fas fa-moon absolute right-1 top-1 text-xs text-pawn-dark opacity-100 dark:opacity-0 transition-opacity duration-300"></i>
+                        </button>
+                        
+                        <a href="#contact" class="bg-pawn-gold text-pawn-dark px-6 py-3 rounded-lg font-semibold hover:bg-pawn-accent transition duration-300 shadow-md hover:shadow-lg btn-primary">
+                            Get Cash Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center space-x-3">
+                    <!-- Dark Mode Toggle for Mobile -->
+                    <button id="theme-toggle-mobile" class="theme-toggle touch-target" aria-label="Toggle dark mode">
+                        <i class="fas fa-sun absolute left-1 top-1 text-xs text-pawn-dark opacity-0 dark:opacity-100 transition-opacity duration-300"></i>
+                        <i class="fas fa-moon absolute right-1 top-1 text-xs text-pawn-dark opacity-100 dark:opacity-0 transition-opacity duration-300"></i>
+                    </button>
+                    
+                    <button id="mobile-menu-button" class="text-pawn-dark hover:text-pawn-gold p-3 rounded-md transition duration-300 touch-target dark:text-gray-200" aria-label="Toggle mobile menu">
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-200 shadow-lg transition-all duration-300 dark:bg-gray-800 dark:border-gray-600 hidden">
+            <div class="px-4 py-6 space-y-2">
+                <a href="#home" class="block text-pawn-dark hover:text-pawn-gold font-medium py-4 px-3 rounded-lg transition duration-300 touch-target dark:text-gray-200">
+                    <i class="fas fa-home mr-3" aria-hidden="true"></i>Home
+                </a>
+                <a href="#services" class="block text-pawn-dark hover:text-pawn-gold font-medium py-4 px-3 rounded-lg transition duration-300 touch-target dark:text-gray-200">
+                    <i class="fas fa-tools mr-3" aria-hidden="true"></i>Services
+                </a>
+                <a href="#about" class="block text-pawn-dark hover:text-pawn-gold font-medium py-4 px-3 rounded-lg transition duration-300 touch-target dark:text-gray-200">
+                    <i class="fas fa-info-circle mr-3" aria-hidden="true"></i>About
+                </a>
+                <a href="#contact" class="block text-pawn-dark hover:text-pawn-gold font-medium py-4 px-3 rounded-lg transition duration-300 touch-target dark:text-gray-200">
+                    <i class="fas fa-envelope mr-3" aria-hidden="true"></i>Contact
+                </a>
+                <a href="#contact" class="block bg-pawn-gold text-pawn-dark px-6 py-4 rounded-lg font-semibold text-center hover:bg-pawn-accent transition duration-300 mt-4 touch-target btn-primary">
+                    <i class="fas fa-dollar-sign mr-2" aria-hidden="true"></i>Get Cash Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[60vh] flex items-center justify-center text-white relative overflow-hidden" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-responsive font-bold mb-6 md:mb-8 leading-tight" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-pawn-gold">Fast Cash</span><br>
+                    <span class="text-white">Fair Deals</span>
+                </h1>
+                <p class="text-lg md:text-xl lg:text-2xl mb-8 md:mb-12 text-gray-200 leading-relaxed px-4" data-aos="fade-up" data-aos-delay="400">
+                    Your trusted local pawn shop in Griffin, Georgia for over 20 years. Get instant cash loans, 
+                    sell your items for top dollar, or use our layaway service.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center px-4" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#contact" class="bg-pawn-gold text-pawn-dark px-8 md:px-10 py-4 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-pawn-accent transform hover:scale-105 transition duration-300 shadow-xl min-w-[200px] touch-target btn-primary">
+                        <i class="fas fa-dollar-sign mr-2" aria-hidden="true"></i>Get Cash Today
+                    </a>
+                    <a href="#services" class="border-2 border-pawn-gold text-pawn-gold px-8 md:px-10 py-4 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-pawn-gold hover:text-pawn-dark transition duration-300 min-w-[200px] touch-target">
+                        <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>Learn More
+                    </a>
+                </div>
+                
+                <!-- Trust indicators -->
+                <div class="mt-12 md:mt-16 grid grid-cols-3 gap-4 md:gap-8 px-4">
+                    <div class="text-center animate-scale-in" data-aos="fade-up" data-aos-delay="800">
+                        <div class="text-2xl md:text-3xl font-bold text-pawn-gold mb-1 md:mb-2">20+</div>
+                        <div class="text-sm md:text-base text-gray-300">Years in Business</div>
+                    </div>
+                    <div class="text-center animate-scale-in" data-aos="fade-up" data-aos-delay="900">
+                        <div class="text-2xl md:text-3xl font-bold text-pawn-gold mb-1 md:mb-2">10K+</div>
+                        <div class="text-sm md:text-base text-gray-300">Happy Customers</div>
+                    </div>
+                    <div class="text-center animate-scale-in" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="text-2xl md:text-3xl font-bold text-pawn-gold mb-1 md:mb-2">24hr</div>
+                        <div class="text-sm md:text-base text-gray-300">Secure Storage</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="absolute top-20 left-10 w-16 h-16 md:w-20 md:h-20 bg-pawn-gold/10 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-24 h-24 md:w-32 md:h-32 bg-pawn-gold/5 rounded-full animate-pulse delay-1000"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white dark:bg-gray-900 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-pawn-dark dark:text-gray-200 mb-4 md:mb-6">Our Services</h2>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+                    We offer comprehensive pawn services with transparency, fairness, and the highest level of customer service.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Pawn Loans -->
+                <div class="group bg-gradient-to-br from-pawn-light to-white dark:from-gray-800 dark:to-gray-700 p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-600 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-pawn-gold to-pawn-accent w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 md:mb-8 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-hand-holding-usd text-2xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-pawn-dark dark:text-gray-200 mb-4 text-center">Pawn Loans</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 md:mb-8 text-center leading-relaxed text-sm md:text-base">
+                        Get instant cash loans using your valuable items as collateral. 
+                        No credit check, no hassle, just fast money when you need it most.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Instant cash in minutes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>No credit check required</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Flexible repayment terms</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Secure storage included</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sell Items -->
+                <div class="group bg-gradient-to-br from-pawn-light to-white dark:from-gray-800 dark:to-gray-700 p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-600 card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gradient-to-br from-pawn-gold to-pawn-accent w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 md:mb-8 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-tags text-2xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-pawn-dark dark:text-gray-200 mb-4 text-center">Sell Items</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 md:mb-8 text-center leading-relaxed text-sm md:text-base">
+                        Get top dollar for your unwanted jewelry, electronics, tools, and other valuable items. 
+                        Fair market prices guaranteed with no hidden fees.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Fair market value pricing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Cash payment on the spot</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Professional appraisal</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>No pressure to sell</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Layaway -->
+                <div class="group bg-gradient-to-br from-pawn-light to-white dark:from-gray-800 dark:to-gray-700 p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-600 card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bg-gradient-to-br from-pawn-gold to-pawn-accent w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 md:mb-8 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-handshake text-2xl md:text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-pawn-dark dark:text-gray-200 mb-4 text-center">Layaway</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 md:mb-8 text-center leading-relaxed text-sm md:text-base">
+                        Reserve items with a small deposit and pay over time. 
+                        Perfect for special purchases and budgeting without credit cards.
+                    </p>
+                    <ul class="space-y-3 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Small deposit required</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Flexible payment plans</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>Secure item storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-pawn-gold mr-3"></i>
+                            <span>No interest charges</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-gradient-to-br from-pawn-light to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-pawn-dark dark:text-gray-200 mb-6 md:mb-8">About Sam's Pawn Shop</h2>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 md:mb-8 leading-relaxed">
+                        Founded in 2003, Sam's Pawn Shop has been a cornerstone of the Griffin community, 
+                        providing honest and reliable financial services to our neighbors for over two decades.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 md:mb-8 leading-relaxed">
+                        We're a family-owned business that believes in treating every customer like family. 
+                        Our commitment to fair prices, honest appraisals, and exceptional service has made us 
+                        the most trusted pawn shop in Griffin and surrounding areas.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 md:gap-8 mt-8 md:mt-12">
+                        <div class="text-center bg-white dark:bg-gray-800 p-4 md:p-6 rounded-xl shadow-md card-hover">
+                            <div class="text-3xl md:text-4xl font-bold text-pawn-gold mb-1 md:mb-2">20+</div>
+                            <div class="text-gray-600 dark:text-gray-300 font-medium text-sm md:text-base">Years in Business</div>
+                        </div>
+                        <div class="text-center bg-white dark:bg-gray-800 p-4 md:p-6 rounded-xl shadow-md card-hover">
+                            <div class="text-3xl md:text-4xl font-bold text-pawn-gold mb-1 md:mb-2">10K+</div>
+                            <div class="text-gray-600 dark:text-gray-300 font-medium text-sm md:text-base">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 md:p-10 rounded-2xl shadow-xl card-hover">
+                    <h3 class="text-xl md:text-2xl font-bold text-pawn-dark dark:text-gray-200 mb-6 md:mb-8">Why Choose Us?</h3>
+                    <ul class="space-y-4 md:space-y-6">
+                        <li class="flex items-start">
+                            <div class="bg-pawn-gold/10 p-2 md:p-3 rounded-full mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-pawn-gold text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-pawn-dark dark:text-gray-200 mb-1 text-sm md:text-base">Licensed & Insured</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Fully licensed and insured for your complete protection</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-pawn-gold/10 p-2 md:p-3 rounded-full mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-user-tie text-pawn-gold text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-pawn-dark dark:text-gray-200 mb-1 text-sm md:text-base">Expert Appraisers</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Professional appraisers with decades of experience</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-pawn-gold/10 p-2 md:p-3 rounded-full mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-lock text-pawn-gold text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-pawn-dark dark:text-gray-200 mb-1 text-sm md:text-base">Secure Storage</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">24/7 monitored secure storage facilities</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-pawn-gold/10 p-2 md:p-3 rounded-full mr-3 md:mr-4 flex-shrink-0">
+                                <i class="fas fa-handshake text-pawn-gold text-lg md:text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-pawn-dark dark:text-gray-200 mb-1 text-sm md:text-base">Transparent Pricing</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Clear pricing with absolutely no hidden fees</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 md:py-24 bg-white dark:bg-gray-900 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-pawn-dark dark:text-gray-200 mb-4 md:mb-6">What Our Customers Say</h2>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+                    Don't just take our word for it. Here's what our valued customers have to say about their experience.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-gradient-to-br from-pawn-light to-white dark:from-gray-800 dark:to-gray-700 p-6 md:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-pawn-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic text-sm md:text-base">
+                        "Sam's Pawn Shop helped me out when I needed cash fast. They gave me a fair price for my jewelry and the process was so easy. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-pawn-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">S</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-pawn-dark dark:text-gray-200 text-sm md:text-base">Sarah Johnson</div>
+                            <div class="text-gray-500 dark:text-gray-400 text-sm">Local Resident</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-pawn-light to-white dark:from-gray-800 dark:to-gray-700 p-6 md:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-pawn-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic text-sm md:text-base">
+                        "I've been coming here for years. The staff is always friendly and professional. They really care about their customers and give honest appraisals."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-pawn-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">M</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-pawn-dark dark:text-gray-200 text-sm md:text-base">Mike Rodriguez</div>
+                            <div class="text-gray-500 dark:text-gray-400 text-sm">Regular Customer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-pawn-light to-white dark:from-gray-800 dark:to-gray-700 p-6 md:p-8 rounded-2xl shadow-lg card-hover" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-pawn-gold">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed italic text-sm md:text-base">
+                        "Used their layaway service to buy a guitar for my son's birthday. The staff was incredibly helpful and made the whole process smooth and easy."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-pawn-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold text-lg">L</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-pawn-dark dark:text-gray-200 text-sm md:text-base">Lisa Chen</div>
+                            <div class="text-gray-500 dark:text-gray-400 text-sm">Happy Parent</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-pawn-dark to-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Visit Us Today</h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+                    Stop by our shop for friendly service and fair deals. We're conveniently located in downtown.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                        <h3 class="text-2xl font-bold mb-6 text-pawn-gold">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-pawn-gold/20 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-pawn-gold text-xl"></i>
+                                </div>
+                                <div>
+                                                                         <div class="font-semibold text-lg mb-1">Address</div>
+                                     <div class="text-gray-300">312 W Taylor St<br>Griffin, GA 30223</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pawn-gold/20 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-pawn-gold text-xl"></i>
+                                </div>
+                                <div>
+                                                                         <div class="font-semibold text-lg mb-1">Phone</div>
+                                     <div class="text-gray-300">(770) 228-9333</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pawn-gold/20 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-pawn-gold text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-lg mb-1">Hours</div>
+                                    <div class="text-gray-300">
+                                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                        Saturday: 9:00 AM - 5:00 PM<br>
+                                        Sunday: Closed
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                        <h3 class="text-2xl font-bold mb-6 text-pawn-gold">What We Accept</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-gem text-pawn-gold mr-3"></i>
+                                <span>Jewelry & Watches</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-mobile-alt text-pawn-gold mr-3"></i>
+                                <span>Electronics</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-tools text-pawn-gold mr-3"></i>
+                                <span>Tools & Equipment</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-gamepad text-pawn-gold mr-3"></i>
+                                <span>Gaming Systems</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-music text-pawn-gold mr-3"></i>
+                                <span>Musical Instruments</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-camera text-pawn-gold mr-3"></i>
+                                <span>Cameras & Optics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3340.1234567890123!2d-84.26444444444444!3d33.24694444444444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f4a1234567890%3A0x1234567890abcdef!2s312%20W%20Taylor%20St%2C%20Griffin%2C%20GA%2030223!5e0!3m2!1sen!2sus!4v1640995200000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="500" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Sam's Pawn Shop Location in Griffin, GA">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Form -->
+    <section class="bg-gradient-to-br from-pawn-dark to-gray-900 dark:from-gray-900 dark:to-gray-800 text-white py-12 transition-all duration-300">
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-white/20 dark:bg-gray-800/20 dark:border-gray-600" data-aos="fade-up">
+                <h3 class="text-xl md:text-2xl font-bold mb-6 text-pawn-gold text-center">Send Us a Message</h3>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6" novalidate>
+                    <!-- Netlify form handling -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    
+                    <!-- Honeypot field for spam protection -->
+                    <div class="hidden">
+                        <label for="bot-field">Don't fill this out if you're human:</label>
+                        <input name="bot-field" id="bot-field" />
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="full-name" 
+                                name="full-name" 
+                                required 
+                                aria-required="true" 
+                                class="w-full px-4 py-4 md:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pawn-gold focus:border-transparent transition duration-300 form-input touch-target" 
+                                placeholder="Your full name"
+                                minlength="2"
+                                maxlength="100">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                aria-required="true" 
+                                class="w-full px-4 py-4 md:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pawn-gold focus:border-transparent transition duration-300 form-input touch-target" 
+                                placeholder="your.email@example.com"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number (Optional)</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="w-full px-4 py-4 md:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pawn-gold focus:border-transparent transition duration-300 form-input touch-target" 
+                            placeholder="(770) 123-4567"
+                            pattern="[\+]?[1-9][\d]{0,15}">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required 
+                            aria-required="true" 
+                            rows="5" 
+                            class="w-full px-4 py-4 md:py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pawn-gold focus:border-transparent transition duration-300 resize-none form-input touch-target" 
+                            placeholder="Tell us how we can help you..."
+                            minlength="10"
+                            maxlength="1000"></textarea>
+                    </div>
+                    
+                    <!-- Netlify reCAPTCHA -->
+                    <div class="flex justify-center" data-netlify-recaptcha="true"></div>
+                    
+                    <div class="text-center">
+                        <button 
+                            type="submit" 
+                            class="bg-pawn-gold text-pawn-dark px-6 md:px-8 py-4 rounded-lg font-semibold hover:bg-pawn-accent transform hover:scale-105 transition duration-300 shadow-lg min-w-[200px] disabled:opacity-50 disabled:cursor-not-allowed touch-target btn-primary">
+                            <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i>Send Message
+                        </button>
+                    </div>
+                    
+                    <!-- Success/Error Messages -->
+                    <div id="form-message" class="text-center text-sm mt-2 hidden"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-white dark:bg-gray-900 py-16 transition-all duration-300">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-pawn-dark dark:text-gray-200 mb-8 md:mb-10 text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+        <div class="space-y-6 md:space-y-8">
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="text-lg font-semibold text-pawn-gold mb-3">What do I need to bring to pawn an item?</h3>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Bring a valid government-issued photo ID and the item you wish to pawn. We'll appraise your item and offer you a fair loan amount on the spot.</p>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="400">
+              <h3 class="text-lg font-semibold text-pawn-gold mb-3">How long do I have to repay my pawn loan?</h3>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Our standard pawn loan term is 30 days, but you can extend your loan by paying the interest. We offer flexible repayment options to fit your needs.</p>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="600">
+              <h3 class="text-lg font-semibold text-pawn-gold mb-3">What types of items do you accept?</h3>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">We accept gold, jewelry, electronics, tools, musical instruments, and more. If you're unsure, just give us a call or stop by!</p>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 card-hover" data-aos="fade-up" data-aos-delay="800">
+              <h3 class="text-lg font-semibold text-pawn-gold mb-3">Is my item safe while it's in pawn?</h3>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Absolutely. All pawned items are stored in our secure, monitored facility until you repay your loan and pick them up.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-50 bg-pawn-gold text-pawn-dark p-4 rounded-full shadow-lg hover:bg-pawn-accent transition duration-300 hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mx-auto" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+      </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-pawn-dark dark:bg-gray-900 text-white py-16 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold text-pawn-gold mb-6">
+                        <i class="fas fa-coins mr-2" aria-hidden="true"></i>Sam's Pawn Shop
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed max-w-md">
+                        Your trusted local pawn shop in Griffin, Georgia for over 20 years. Fast cash, fair prices, 
+                        and friendly service. Licensed and insured for your protection.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-pawn-gold/20 p-3 rounded-full text-pawn-gold hover:bg-pawn-gold hover:text-pawn-dark transition duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="bg-pawn-gold/20 p-3 rounded-full text-pawn-gold hover:bg-pawn-gold hover:text-pawn-dark transition duration-300">
+                            <i class="fab fa-google text-lg"></i>
+                        </a>
+                        <a href="#" class="bg-pawn-gold/20 p-3 rounded-full text-pawn-gold hover:bg-pawn-gold hover:text-pawn-dark transition duration-300">
+                            <i class="fab fa-yelp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-pawn-gold">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-pawn-gold transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-pawn-gold transition duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-pawn-gold transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-pawn-gold transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-pawn-gold">Contact Info</h4>
+                                         <div class="space-y-3 text-gray-300">
+                         <p>312 W Taylor St</p>
+                         <p>Griffin, GA 30223</p>
+                         <p class="font-semibold">(770) 228-9333</p>
+                         <p>Mon-Fri: 9AM-6PM</p>
+                         <p>Sat: 9AM-5PM</p>
+                     </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                                 <p class="text-gray-300">
+                     &copy; 2024 Sam's Pawn Shop. All rights reserved. | Licensed and Insured | 
+                     <a href="#" class="text-pawn-gold hover:underline">Privacy Policy</a> | 
+                     <a href="#" class="text-pawn-gold hover:underline">Terms of Service</a>
+                 </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Dark mode functionality
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+            
+            if (isDark) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Initialize theme on page load
+        initTheme();
+
+        // Theme toggle event listeners
+        document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+        document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton?.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icon
+            const icon = this.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/95', 'dark:bg-gray-800/95');
+                navbar.classList.remove('bg-white/80', 'dark:bg-gray-800/80');
+            } else {
+                navbar.classList.remove('bg-white/95', 'dark:bg-gray-800/95');
+                navbar.classList.add('bg-white/80', 'dark:bg-gray-800/80');
+            }
+        });
+
+        // Add touch feedback for mobile
+        document.querySelectorAll('.touch-target').forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+            
+            element.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-hover, .btn-primary').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+    <script>
+              // Contact form handling
+        const contactForm = document.querySelector('form[name="contact"]');
+        const formMessage = document.getElementById('form-message');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                // Don't prevent default - let Netlify handle the submission
+                const submitButton = this.querySelector('button[type="submit"]');
+                const fullName = document.getElementById('full-name');
+                const email = document.getElementById('email');
+                const message = document.getElementById('message');
+                
+                // Basic client-side validation
+                let valid = true;
+                const requiredFields = [fullName, email, message];
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('ring-2', 'ring-red-500');
+                        valid = false;
+                    } else {
+                        field.classList.remove('ring-2', 'ring-red-500');
+                    }
+                });
+                
+                // Email validation
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email.value && !emailPattern.test(email.value)) {
+                    email.classList.add('ring-2', 'ring-red-500');
+                    valid = false;
+                }
+                
+                if (!valid) {
+                    e.preventDefault();
+                    showMessage('Please fill in all required fields correctly.', 'error');
+                    return;
+                }
+                
+                // Disable submit button and show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2" aria-hidden="true"></i>Sending...';
+                showMessage('Sending your message...', 'info');
+            });
+            
+            // Handle form success/error based on URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                showMessage('Thank you for your message! We will get back to you soon.', 'success');
+                contactForm.reset();
+            } else if (urlParams.get('error') === 'true') {
+                showMessage('There was an error sending your message. Please try again.', 'error');
+            }
+        }
+        
+        function showMessage(message, type) {
+            formMessage.textContent = message;
+            formMessage.className = 'text-center text-sm mt-2';
+            
+            switch (type) {
+                case 'success':
+                    formMessage.classList.add('text-green-400');
+                    break;
+                case 'error':
+                    formMessage.classList.add('text-red-400');
+                    break;
+                case 'info':
+                    formMessage.classList.add('text-blue-400');
+                    break;
+            }
+            
+            formMessage.classList.remove('hidden');
+            
+            // Auto-hide success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }
+        }
+
+        // Back to Top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('hidden');
+                backToTopButton.classList.add('animate-scale-in');
+            } else {
+                backToTopButton.classList.add('hidden');
+                backToTopButton.classList.remove('animate-scale-in');
+            }
+        });
+        
+        backToTopButton?.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <style>
+      @media (max-width: 768px) {
+        .hero-bg {
+          min-height: 80vh !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    </style>
+</body>
+</html> 

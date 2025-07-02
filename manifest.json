@@ -1,0 +1,32 @@
+{
+  "name": "Sam's Pawn Shop - Griffin GA",
+  "short_name": "Sam's Pawn",
+  "description": "Your trusted local pawn shop in Griffin, Georgia for over 20 years. Fast cash, fair prices, and friendly service.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1F2937",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "finance"],
+  "lang": "en-US",
+  "dir": "ltr"
+} 
