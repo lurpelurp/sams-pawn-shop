@@ -8,7 +8,7 @@ A modern, responsive website for Sam's Pawn Shop in Griffin, Georgia. Built with
 - **Modern UI** - Professional design with smooth animations
 - **SEO Optimized** - Meta tags, sitemap, and structured data
 - **PWA Ready** - Progressive Web App with manifest
-- **Contact Form** - Functional contact form with validation
+- **Netlify Forms** - Fully functional contact form with spam protection and reCAPTCHA
 - **Accessibility** - WCAG compliant with proper ARIA labels
 - **Fast Loading** - Optimized for performance
 
@@ -18,6 +18,8 @@ A modern, responsive website for Sam's Pawn Shop in Griffin, Georgia. Built with
 sam-pawn-shop/
 ├── public/                 # Production files
 │   ├── index.html         # Main HTML file
+│   ├── thank-you.html     # Form submission success page
+│   ├── _redirects         # Netlify redirects
 │   ├── manifest.json      # PWA manifest
 │   ├── robots.txt         # SEO robots file
 │   ├── sitemap.xml        # SEO sitemap
@@ -27,6 +29,7 @@ sam-pawn-shop/
 │   ├── favicon-16x16.png
 │   ├── android-chrome-192x192.png
 │   └── android-chrome-512x512.png
+├── netlify.toml           # Netlify configuration
 ├── assets/                # Development assets (if any)
 ├── README.md             # This file
 └── .gitignore           # Git ignore file
@@ -136,6 +139,19 @@ sam-pawn-shop/
 ### Update PWA:
 - Edit `public/manifest.json` for app details
 - Replace favicon files in `public/` directory
+
+### Netlify Forms Configuration:
+The contact form is configured with Netlify Forms and includes:
+- **Spam Protection**: Honeypot field and reCAPTCHA
+- **Form Validation**: Client-side validation with proper error messages
+- **Success Page**: Redirects to `/thank-you.html` after submission
+- **Form Fields**: Full Name, Email, Phone (optional), and Message
+- **Accessibility**: Proper labels, ARIA attributes, and keyboard navigation
+
+To customize form behavior:
+- Edit form fields in `public/index.html`
+- Modify success page in `public/thank-you.html`
+- Update redirects in `netlify.toml` and `public/_redirects`
 
 ## 📱 PWA Features
 
