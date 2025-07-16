@@ -3,521 +3,557 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam's Pawn Shop - Fast Cash, Fair Deals, Trusted Since 1999 | Griffin, GA</title>
-    <meta name="description" content="Get cash today for your valuable items at Sam's Pawn Shop in Griffin, GA. Licensed, insured, and trusted since 1999. Fast pawn loans, fair appraisals, secure storage.">
-    <meta name="keywords" content="pawn shop, Griffin GA, cash for jewelry, pawn loans, sell items, layaway, licensed pawn shop, Georgia pawn association, pawn shop near me">
+    <title>Sam's Pawn Shop - Fast Cash, Fair Deals | Trusted Pawn Shop in Griffin, GA Since 1999</title>
+    <meta name="description" content="Get fast cash for your valuable items at Sam's Pawn Shop in Griffin, Georgia. Licensed, insured, and trusted since 1999. Pawn loans, layaway, and fair appraisals.">
+    <meta name="keywords" content="pawn shop Griffin GA, cash for jewelry, pawn loans, layaway, buy items, pawn shop near me, Griffin pawn shop">
+    <meta name="author" content="Sam's Pawn Shop">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'treasure-gold': '#D4AF37',
-                        'deep-navy': '#1A2332',
-                        'rich-burgundy': '#8B2635',
-                        'emerald': '#2D5A27',
-                        'warm-cream': '#F5F5DC'
-                    },
-                    fontFamily: {
-                        'display': ['Playfair Display', 'serif'],
-                        'sans': ['Inter', 'sans-serif']
-                    }
-                }
-            }
-        }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.samspawnshop.com/">
+    <meta property="og:title" content="Sam's Pawn Shop - Fast Cash, Fair Deals | Griffin, GA">
+    <meta property="og:description" content="Get fast cash for your valuable items. Licensed, insured, and trusted since 1999.">
+    <meta property="og:image" content="https://www.samspawnshop.com/hero-storefront.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.samspawnshop.com/">
+    <meta property="twitter:title" content="Sam's Pawn Shop - Fast Cash, Fair Deals | Griffin, GA">
+    <meta property="twitter:description" content="Get fast cash for your valuable items. Licensed, insured, and trusted since 1999.">
+    <meta property="twitter:image" content="https://www.samspawnshop.com/hero-storefront.webp">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PawnShop",
+        "name": "Sam's Pawn Shop",
+        "description": "Fast cash for valuable items. Licensed, insured, and trusted since 1999.",
+        "url": "https://www.samspawnshop.com",
+        "telephone": "+1-770-228-9333",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "312 W Taylor St",
+            "addressLocality": "Griffin",
+            "addressRegion": "GA",
+            "postalCode": "30223",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.2468,
+            "longitude": -84.2647
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-17:00"
+        ],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        },
+        "sameAs": [
+            "https://www.facebook.com/samspawnshop",
+            "https://www.google.com/maps?cid=123456789"
+        ]
+    }
     </script>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="hero-storefront.webp" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" as="style">
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1A2332 0%, #2A3447 50%, #1A2332 100%);
-        }
-        .treasure-gradient {
-            background: linear-gradient(135deg, #D4AF37 0%, #E6C866 50%, #D4AF37 100%);
-        }
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .animate-glow {
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        @keyframes glow {
-            0% { box-shadow: 0 0 5px #D4AF37; }
-            100% { box-shadow: 0 0 20px #D4AF37, 0 0 30px #D4AF37; }
-        }
-    </style>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Cookie Consent -->
+    <script>
+        window.cookieconsent = {
+            "position": "bottom",
+            "theme": "classic",
+            "palette": {
+                "popup": {
+                    "background": "#0a2e5e",
+                    "text": "#ffffff"
+                },
+                "button": {
+                    "background": "#d4a017",
+                    "text": "#ffffff"
+                }
+            },
+            "content": {
+                "message": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+                "dismiss": "Got it!",
+                "link": "Learn more",
+                "href": "/privacy-policy.html"
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.0.1/dist/cookieconsent.js"></script>
 </head>
-<body class="bg-warm-cream font-sans text-deep-navy">
+<body>
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-deep-navy text-treasure-gold shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-treasure-gold rounded-full flex items-center justify-center animate-glow">
-                        <span class="text-deep-navy font-bold text-xl">$</span>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#home" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-dollar-sign"></i>
                     </div>
-                    <div>
-                        <h1 class="font-display font-bold text-2xl text-treasure-gold">Sam's Pawn Shop</h1>
-                        <p class="text-xs text-treasure-gold/80">Trusted Since 1999</p>
+                    <div class="logo-text">
+                        <h1>Sam's Pawn Shop</h1>
+                        <p>Trusted Since 1999</p>
+                    </div>
+                </a>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Get Cash Now</a></li>
+                </ul>
+
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
-                        <span>🏠</span>
-                        <span>Home</span>
-                    </a>
-                    <a href="#services" class="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
-                        <span>⚙️</span>
-                        <span>Services</span>
-                    </a>
-                    <a href="#about" class="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
-                        <span>ℹ️</span>
-                        <span>About</span>
-                    </a>
-                    <a href="#contact" class="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
-                        <span>📞</span>
-                        <span>Contact</span>
-                    </a>
-                    <button class="bg-treasure-gold text-deep-navy px-6 py-2 rounded-full font-bold hover:bg-white transition-all duration-200 transform hover:scale-105">
-                        💰 Get Cash Now
-                    </button>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-treasure-gold text-2xl" onclick="toggleMobileMenu()">
-                    ☰
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="md:hidden hidden py-4 border-t border-treasure-gold/20">
-                <nav class="flex flex-col space-y-4">
-                    <a href="#home" class="text-treasure-gold hover:text-white transition-colors duration-200">🏠 Home</a>
-                    <a href="#services" class="text-treasure-gold hover:text-white transition-colors duration-200">⚙️ Services</a>
-                    <a href="#about" class="text-treasure-gold hover:text-white transition-colors duration-200">ℹ️ About</a>
-                    <a href="#contact" class="text-treasure-gold hover:text-white transition-colors duration-200">📞 Contact</a>
-                    <button class="bg-treasure-gold text-deep-navy px-6 py-2 rounded-full font-bold hover:bg-white transition-all duration-200">
-                        💰 Get Cash Now
-                    </button>
-                </nav>
-            </div>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-            <div class="animate-float">
-                <!-- Logo/Brand -->
-                <div class="mb-8">
-                    <h1 class="text-5xl md:text-7xl font-display font-bold text-treasure-gold mb-4 text-shadow">
-                        Sam's Pawn Shop
-                    </h1>
-                    <div class="w-24 h-1 bg-treasure-gold mx-auto mb-6"></div>
-                    <p class="text-xl md:text-2xl text-white/90 font-light">
-                        Fast Cash • Fair Deals • Trusted Since 1999
-                    </p>
-                </div>
-
-                <!-- Main Headline -->
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">
-                    Get Cash Today for Your
-                    <span class="text-treasure-gold block">Valuable Items</span>
-                </h2>
-
-                <!-- Trust Badges -->
-                <div class="flex flex-wrap justify-center gap-4 mb-12">
-                    <div class="glass-effect rounded-full px-4 py-2 flex items-center space-x-2">
-                        <span class="text-lg">🛡️</span>
-                        <span class="text-sm font-medium">Licensed & Insured</span>
-                    </div>
-                    <div class="glass-effect rounded-full px-4 py-2 flex items-center space-x-2">
-                        <span class="text-lg">🏆</span>
-                        <span class="text-sm font-medium">Georgia Pawn Association</span>
-                    </div>
-                    <div class="glass-effect rounded-full px-4 py-2 flex items-center space-x-2">
-                        <span class="text-lg">🔒</span>
-                        <span class="text-sm font-medium">Secure Storage</span>
-                    </div>
-                    <div class="glass-effect rounded-full px-4 py-2 flex items-center space-x-2">
-                        <span class="text-lg">⭐</span>
-                        <span class="text-sm font-medium">Trusted Since 1999</span>
-                    </div>
-                </div>
-
-                <!-- CTAs -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <a href="#get-cash" class="px-8 py-4 bg-treasure-gold text-deep-navy font-bold rounded-full text-lg shadow-lg hover:bg-white transition-all duration-300 transform hover:scale-105">
-                        💰 Get Cash Now
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fast Cash. Fair Deals.</h1>
+                <p>Trusted pawn shop in Griffin, GA for over 25 years. Get instant cash for your valuable items with professional service and secure storage.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-dollar-sign"></i>
+                        Get Cash Today
                     </a>
-                    <a href="#inventory" class="px-8 py-4 border-2 border-treasure-gold text-treasure-gold font-bold rounded-full text-lg hover:bg-treasure-gold hover:text-deep-navy transition-all duration-300 transform hover:scale-105">
-                        🛍️ View Inventory
+                    <a href="#services" class="btn btn-secondary btn-large">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
                     </a>
                 </div>
 
-                <!-- Quick Quote Form -->
-                <div class="glass-effect rounded-2xl p-6 max-w-md mx-auto">
-                    <h3 class="text-white font-bold mb-4">Get a Fast Quote!</h3>
-                    <div class="flex gap-2">
-                        <input type="text" placeholder="What do you want to sell?" class="flex-1 px-4 py-2 rounded-lg border-0 text-deep-navy placeholder-gray-500 focus:ring-2 focus:ring-treasure-gold">
-                        <button class="px-6 py-2 bg-treasure-gold text-deep-navy font-bold rounded-lg hover:bg-white transition">
-                            Quote
-                        </button>
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Licensed & Insured</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-trophy"></i>
+                        <span>Georgia Pawn Association</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-star"></i>
+                        <span>4.9 Star Rating</span>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-                <div class="w-1 h-3 bg-white rounded-full mt-2"></div>
+            <div class="hero-image">
+                <picture>
+                    <source srcset="hero-storefront.webp" type="image/webp">
+                    <img src="hero-storefront.webp" alt="Sam's Pawn Shop storefront in Griffin, GA" loading="eager">
+                </picture>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-deep-navy mb-4">
-                    Our Services
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Professional pawn services designed to meet your financial needs with integrity and trust.
-                </p>
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional pawn services designed to meet your financial needs with integrity and trust.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Pawn Loans -->
-                <div class="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-treasure-gold to-yellow-400"></div>
-                    <div class="p-8">
-                        <div class="text-4xl mb-4">💰</div>
-                        <h3 class="text-2xl font-bold mb-4 text-deep-navy">Pawn Loans</h3>
-                        <p class="text-gray-600 mb-6">Get instant cash with flexible repayment terms. No credit check required.</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Instant approval</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">No credit check</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Flexible terms</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Secure storage</span>
-                            </li>
-                        </ul>
-                        <button class="w-full bg-deep-navy text-white py-3 rounded-lg font-bold hover:bg-rich-burgundy transition-colors duration-200">
-                            Learn More
-                        </button>
+            <div class="services-grid">
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-money-bill-wave"></i>
                     </div>
+                    <h3>Pawn Loans</h3>
+                    <p>Get instant cash with flexible repayment terms. No credit check required.</p>
+                    <ul class="service-features">
+                        <li>Instant approval</li>
+                        <li>No credit check</li>
+                        <li>Flexible terms</li>
+                        <li>Secure storage</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i>
+                        Get Loan
+                    </a>
                 </div>
 
-                <!-- Sell Items -->
-                <div class="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-deep-navy to-rich-burgundy"></div>
-                    <div class="p-8">
-                        <div class="text-4xl mb-4">🛍️</div>
-                        <h3 class="text-2xl font-bold mb-4 text-deep-navy">Sell Items</h3>
-                        <p class="text-gray-600 mb-6">Get fair market value for your valuable items. Cash payment on the spot.</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Fair pricing</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Cash payment</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Professional appraisal</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">No pressure</span>
-                            </li>
-                        </ul>
-                        <button class="w-full bg-deep-navy text-white py-3 rounded-lg font-bold hover:bg-rich-burgundy transition-colors duration-200">
-                            Learn More
-                        </button>
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
+                    <h3>Sell Items</h3>
+                    <p>Get fair market value for your valuable items. Cash payment on the spot.</p>
+                    <ul class="service-features">
+                        <li>Fair pricing</li>
+                        <li>Cash payment</li>
+                        <li>Professional appraisal</li>
+                        <li>No pressure</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i>
+                        Sell Now
+                    </a>
                 </div>
 
-                <!-- Layaway -->
-                <div class="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald to-green-400"></div>
-                    <div class="p-8">
-                        <div class="text-4xl mb-4">📦</div>
-                        <h3 class="text-2xl font-bold mb-4 text-deep-navy">Layaway</h3>
-                        <p class="text-gray-600 mb-6">Reserve items with a small deposit and pay over time. No interest charges.</p>
-                        <ul class="space-y-2 mb-6">
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Small deposit</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">No interest</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Flexible payments</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <span class="text-treasure-gold">✓</span>
-                                <span class="text-gray-700">Secure storage</span>
-                            </li>
-                        </ul>
-                        <button class="w-full bg-deep-navy text-white py-3 rounded-lg font-bold hover:bg-rich-burgundy transition-colors duration-200">
-                            Learn More
-                        </button>
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Layaway</h3>
+                    <p>Reserve items with a small deposit and pay over time. No interest charges.</p>
+                    <ul class="service-features">
+                        <li>Small deposit</li>
+                        <li>No interest</li>
+                        <li>Flexible payments</li>
+                        <li>Secure storage</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i>
+                        Start Layaway
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Sam's Pawn Shop</h2>
+                <p>Your trusted partner for financial solutions in Griffin, Georgia since 1999.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div>
+                    <h3>Our Story</h3>
+                    <p>For over 25 years, Sam's Pawn Shop has been serving the Griffin community with integrity, fairness, and professional service. We understand that everyone faces financial challenges, and we're here to help with quick, reliable solutions.</p>
+                    
+                    <h3>Why Choose Us?</h3>
+                    <ul class="service-features">
+                        <li>Licensed and insured by the State of Georgia</li>
+                        <li>Member of the Georgia Pawn Association</li>
+                        <li>Professional appraisals and fair pricing</li>
+                        <li>Secure, climate-controlled storage</li>
+                        <li>Flexible payment options</li>
+                        <li>Excellent customer service</li>
+                    </ul>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Business Hours</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br>
+                            <strong>Saturday:</strong> 9:00 AM - 5:00 PM<br>
+                            <strong>Sunday:</strong> By Appointment
+                        </div>
+                    </div>
+
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Address:</strong><br>
+                            312 W Taylor St<br>
+                            Griffin, GA 30223
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+17702289333">(770) 228-9333</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@samspawnshop.com">info@samspawnshop.com</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Loan Application Form -->
-    <section class="py-20 bg-gradient-to-br from-deep-navy to-rich-burgundy text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
-                    Get Your Loan Today
-                </h2>
-                <p class="text-xl text-white/80">
-                    Fill out the form below and we'll get back to you within 24 hours with a quote.
-                </p>
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it. Here's what our satisfied customers have to say about their experience.</p>
             </div>
 
-            <form class="bg-white/10 backdrop-blur-md rounded-2xl p-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Full Name *</label>
-                        <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold" placeholder="Your full name">
+            <div class="testimonials-grid">
+                <div class="testimonial-card loading">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Phone Number *</label>
-                        <input type="tel" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold" placeholder="(770) 555-0123">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Email</label>
-                        <input type="email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold" placeholder="your@email.com">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Item Type *</label>
-                        <select required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-treasure-gold">
-                            <option value="">Select item type</option>
-                            <option value="jewelry">Jewelry</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="tools">Tools</option>
-                            <option value="watches">Watches</option>
-                            <option value="musical">Musical Instruments</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="md:col-span-2">
-                        <label class="block text-sm font-medium mb-2">Item Description *</label>
-                        <textarea required rows="3" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold" placeholder="Describe your item in detail..."></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Estimated Value</label>
-                        <input type="number" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold" placeholder="$500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Desired Loan Amount</label>
-                        <input type="number" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold" placeholder="$300">
+                    <p class="testimonial-text">"I was in a tight spot and needed cash fast. Sam's Pawn Shop gave me a fair deal on my grandmother's diamond ring. The staff was professional and made me feel comfortable throughout the whole process. I'll definitely come back!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>Griffin, GA - December 2024</p>
+                        </div>
+                        <span class="item-type">Diamond Ring</span>
                     </div>
                 </div>
-                <div class="mt-8 text-center">
-                    <button type="submit" class="bg-treasure-gold text-deep-navy px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-200 transform hover:scale-105">
-                        Submit Application
-                    </button>
+
+                <div class="testimonial-card loading">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="testimonial-text">"I've been a customer here for 8 years. When my son needed a laptop for college, I found a perfect MacBook Pro at Sam's for half the retail price. Their inventory is always changing and the quality is excellent."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Mike Rodriguez</h4>
+                            <p>McDonough, GA - November 2024</p>
+                        </div>
+                        <span class="item-type">MacBook Pro</span>
+                    </div>
                 </div>
-            </form>
+
+                <div class="testimonial-card loading">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p class="testimonial-text">"The jewelry expert at Sam's helped me understand the true value of my antique pieces. They took the time to explain the history and craftsmanship. I felt confident I was getting a fair appraisal."</p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Jennifer Lawson</h4>
+                            <p>Hampton, GA - October 2024</p>
+                        </div>
+                        <span class="item-type">Antique Jewelry</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="py-20 bg-warm-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-deep-navy mb-4">
-                    What Our Customers Say
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Don't just take our word for it. Here's what our satisfied customers have to say.
-                </p>
+    <!-- FAQ Section -->
+    <section class="section" id="faq" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our pawn services and policies.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-treasure-gold">
-                            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <details>
+                        <summary class="faq-question">
+                            How much can I get for my item?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Loan amounts typically range from 25% to 60% of the item's retail value, depending on the type of item, condition, and current market demand. We provide free appraisals and will explain our valuation process.</p>
                         </div>
-                        <span class="ml-2 text-sm text-gray-500">December 2024</span>
-                    </div>
-                    <blockquote class="text-gray-700 mb-4 italic">
-                        "Sam's Pawn Shop helped me get cash quickly when I needed it most. They were professional, fair, and made the whole process easy."
-                    </blockquote>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <div class="font-bold text-deep-navy">Sarah M.</div>
-                            <div class="text-sm text-gray-500">Griffin, GA</div>
-                        </div>
-                        <div class="text-sm text-treasure-gold font-medium">
-                            Diamond Ring
-                        </div>
-                    </div>
+                    </details>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-treasure-gold">
-                            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                <div class="faq-item">
+                    <details>
+                        <summary class="faq-question">
+                            What items do you accept for pawn loans?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>We accept a wide variety of valuable items including jewelry, electronics, tools, musical instruments, watches, firearms (with proper documentation), and more. Contact us to discuss your specific item.</p>
                         </div>
-                        <span class="ml-2 text-sm text-gray-500">November 2024</span>
-                    </div>
-                    <blockquote class="text-gray-700 mb-4 italic">
-                        "I've been coming here for years. They always give me the best deals and their service is amazing."
-                    </blockquote>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <div class="font-bold text-deep-navy">Mike R.</div>
-                            <div class="text-sm text-gray-500">McDonough, GA</div>
-                        </div>
-                        <div class="text-sm text-treasure-gold font-medium">
-                            MacBook Pro
-                        </div>
-                    </div>
+                    </details>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="flex text-treasure-gold">
-                            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                <div class="faq-item">
+                    <details>
+                        <summary class="faq-question">
+                            How long do I have to repay my pawn loan?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Pawn loans in Georgia have a 30-day term with the option to extend for additional 30-day periods. You can pay the interest to extend the loan or pay the full amount to redeem your item at any time.</p>
                         </div>
-                        <span class="ml-2 text-sm text-gray-500">October 2024</span>
-                    </div>
-                    <blockquote class="text-gray-700 mb-4 italic">
-                        "The staff is incredibly knowledgeable about jewelry. They helped me understand the value of my grandmother's pieces."
-                    </blockquote>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <div class="font-bold text-deep-navy">Jennifer L.</div>
-                            <div class="text-sm text-gray-500">Hampton, GA</div>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary class="faq-question">
+                            Do you require a credit check?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>No, we never check your credit or report to credit bureaus. Pawn loans are secured by your item, so your credit history doesn't matter. This makes pawn loans accessible to everyone.</p>
                         </div>
-                        <div class="text-sm text-treasure-gold font-medium">
-                            Antique Jewelry
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary class="faq-question">
+                            What happens if I can't repay my loan?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>If you're unable to repay your loan, you can extend it by paying the interest, or the item becomes our property. We always prefer to work with customers to find a solution that works for everyone.</p>
                         </div>
-                    </div>
+                    </details>
+                </div>
+
+                <div class="faq-item">
+                    <details>
+                        <summary class="faq-question">
+                            How do I know my items are safe?
+                        </summary>
+                        <div class="faq-answer">
+                            <p>All pawned items are stored in our secure, climate-controlled facility with 24/7 monitoring. We're fully licensed and insured, and we maintain detailed records of all transactions for your protection.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-deep-navy mb-4">
-                    Visit Us Today
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Stop by our store or give us a call. We're here to help you get the best value for your items.
-                </p>
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Ready to get cash for your valuable items? Contact us today for a free appraisal.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Information -->
-                <div class="space-y-8">
-                    <div class="bg-warm-cream rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-deep-navy flex items-center space-x-2">
-                            <span>📍</span>
-                            <span>Location & Hours</span>
-                        </h3>
-                        <div class="space-y-4">
-                            <div>
-                                <p class="text-lg font-medium text-deep-navy">312 W Taylor St</p>
-                                <p class="text-gray-600">Griffin, GA 30223</p>
-                            </div>
-                            <div>
-                                <p class="font-medium text-deep-navy">Business Hours:</p>
-                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                <p class="text-gray-600">Saturday: 9:00 AM - 5:00 PM</p>
-                                <p class="text-gray-600">Sunday: By Appointment</p>
-                            </div>
-                            <a href="https://maps.google.com/?q=312+W+Taylor+St+Griffin+GA" target="_blank" class="inline-flex items-center space-x-2 bg-treasure-gold text-deep-navy px-4 py-2 rounded-full font-bold hover:bg-white transition-colors duration-200">
-                                <span>🗺️</span>
-                                <span>Get Directions</span>
-                            </a>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get a Quick Quote</h3>
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                            <div class="form-error" id="nameError">Please enter your full name</div>
                         </div>
-                    </div>
 
-                    <div class="bg-warm-cream rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-deep-navy flex items-center space-x-2">
-                            <span>📞</span>
-                            <span>Contact Information</span>
-                        </h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-3">
-                                <span class="text-2xl">📱</span>
-                                <div>
-                                    <p class="font-medium text-deep-navy">Phone</p>
-                                    <a href="tel:+17702289333" class="text-treasure-gold hover:text-deep-navy">(770) 228-9333</a>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="text-2xl">✉️</span>
-                                <div>
-                                    <p class="font-medium text-deep-navy">Email</p>
-                                    <a href="mailto:info@samspawnshop.com" class="text-treasure-gold hover:text-deep-navy">info@samspawnshop.com</a>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                            <div class="form-error" id="phoneError">Please enter a valid phone number</div>
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input">
+                            <div class="form-error" id="emailError">Please enter a valid email address</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="itemType" class="form-label">Item Type *</label>
+                            <select id="itemType" name="itemType" class="form-input" required>
+                                <option value="">Select item type</option>
+                                <option value="jewelry">Jewelry</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="tools">Tools</option>
+                                <option value="watches">Watches</option>
+                                <option value="musical">Musical Instruments</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-error" id="itemTypeError">Please select an item type</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description" class="form-label">Item Description *</label>
+                            <textarea id="description" name="description" class="form-input form-textarea" required placeholder="Describe your item in detail..."></textarea>
+                            <div class="form-error" id="descriptionError">Please describe your item</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estimatedValue" class="form-label">Estimated Value</label>
+                            <input type="number" id="estimatedValue" name="estimatedValue" class="form-input" placeholder="$500">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Get Quote Now
+                        </button>
+                    </form>
                 </div>
 
-                <!-- Map -->
-                <div class="bg-warm-cream rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-deep-navy flex items-center space-x-2">
-                        <span>🗺️</span>
-                        <span>Find Us</span>
-                    </h3>
-                    <div class="bg-gray-300 rounded-lg h-96 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-4xl mb-4">🗺️</div>
-                            <p class="text-gray-600">Interactive Map</p>
-                            <p class="text-sm text-gray-500">Google Maps integration</p>
-                        </div>
+                <div>
+                    <h3>Visit Our Store</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.1234567890123!2d-84.2647!3d33.2468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f4a1234567890%3A0xabcdef1234567890!2sSam%27s+Pawn+Shop!5e0!3m2!1sen!2sus!4v1234567890123"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Sam's Pawn Shop Location">
+                        </iframe>
+                    </div>
+
+                    <div class="contact-info" style="margin-top: var(--spacing-md);">
+                        <h3>Directions</h3>
+                        <p>Located right off W Taylor St, next to Griffin Hardware Store. Easy parking available in front of the building.</p>
+                        <a href="https://maps.google.com/?q=312+W+Taylor+St+Griffin+GA" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-directions"></i>
+                            Get Directions
+                        </a>
                     </div>
                 </div>
             </div>
@@ -525,110 +561,82 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-deep-navy text-treasure-gold py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Contact Info</h4>
-                    <div class="space-y-2 text-sm">
-                        <div>312 W Taylor St</div>
-                        <div>Griffin, GA 30223</div>
-                        <div class="font-medium">(770) 228-9333</div>
-                        <div>info@samspawnshop.com</div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 312 W Taylor St</li>
+                        <li>Griffin, GA 30223</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+17702289333">(770) 228-9333</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@samspawnshop.com">info@samspawnshop.com</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Services</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#pawn-loans" class="hover:text-white transition-colors">Pawn Loans</a></li>
-                        <li><a href="#sell-items" class="hover:text-white transition-colors">Sell Items</a></li>
-                        <li><a href="#layaway" class="hover:text-white transition-colors">Layaway</a></li>
-                        <li><a href="#appraisals" class="hover:text-white transition-colors">Appraisals</a></li>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Trust & Social</h4>
-                    <div class="space-y-4">
-                        <div class="space-y-2 text-sm">
-                            <div class="flex items-center space-x-2">
-                                <span>🛡️</span>
-                                <span>Licensed & Insured</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span>🏆</span>
-                                <span>Georgia Pawn Association</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span>⭐</span>
-                                <span>4.9 Star Rating</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="text-sm font-medium mb-2">Follow Us</div>
-                            <div class="flex space-x-3">
-                                <a href="#" class="hover:text-white transition-colors text-xl">📘</a>
-                                <a href="#" class="hover:text-white transition-colors text-xl">📷</a>
-                                <a href="#" class="hover:text-white transition-colors text-xl">⭐</a>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Pawn Loans</a></li>
+                        <li><a href="#services">Sell Items</a></li>
+                        <li><a href="#services">Layaway</a></li>
+                        <li><a href="#services">Appraisals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Trust & Social</h4>
+                    <ul>
+                        <li><i class="fas fa-shield-alt"></i> Licensed & Insured</li>
+                        <li><i class="fas fa-trophy"></i> Georgia Pawn Association</li>
+                        <li><i class="fas fa-star"></i> 4.9 Star Rating</li>
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-google"></i> Google Reviews</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="border-t border-treasure-gold/20 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    <div class="flex items-center space-x-4">
-                        <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="underline hover:text-white transition-colors">
-                            Back to top
-                        </button>
-                        <span>|</span>
-                        <span>© 2025 Sam's Pawn Shop. All rights reserved.</span>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="/terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
-                        <a href="/sitemap.xml" class="hover:text-white transition-colors">Sitemap</a>
-                    </div>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sam's Pawn Shop. All rights reserved. | 
+                    <a href="/privacy-policy.html">Privacy Policy</a> | 
+                    <a href="/terms-of-service.html">Terms of Service</a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you! We\'ll contact you within 24 hours.');
-        });
+    <!-- Live Chat Widget (Tawk.to) -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/YOUR_TAWK_TO_ID/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
     </script>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </body>
 </html> 
