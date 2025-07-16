@@ -1,8 +1,59 @@
+# Sam's Pawn Shop - Robots.txt
+# Optimized for search engine crawling and indexing
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://samspawnshopgriffin.com/sitemap.xml
+# Allow crawling of main pages
+Allow: /index.html
+Allow: /pawn-tips-news.html
+Allow: /privacy.html
+Allow: /terms.html
 
-# Crawl-delay
-Crawl-delay: 1 
+# Allow crawling of assets
+Allow: /styles.css
+Allow: /script.js
+Allow: /manifest.json
+Allow: /sitemap.xml
+
+# Allow crawling of images
+Allow: /*.webp
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.svg
+
+# Allow crawling of fonts
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot
+
+# Disallow crawling of private/admin areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Disallow crawling of system files
+Disallow: /.htaccess
+Disallow: /.htpasswd
+Disallow: /config/
+Disallow: /logs/
+Disallow: /cache/
+
+# Disallow crawling of development files
+Disallow: /*.log
+Disallow: /*.tmp
+Disallow: /*.bak
+Disallow: /*.old
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://sams-pawn-shop.com/sitemap.xml
+
+# Host directive for canonical domain
+Host: https://sams-pawn-shop.com 
