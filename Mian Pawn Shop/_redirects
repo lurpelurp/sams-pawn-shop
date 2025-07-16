@@ -1,0 +1,5 @@
+# Handle form submissions
+/contact  /thank-you.html  200
+
+# Redirect form submissions to thank you page
+/*  /index.html  200 

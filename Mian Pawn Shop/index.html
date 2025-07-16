@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam's Pawn Shop - Fast Cash, Fair Deals, Trusted Since 1999 | Griffin, GA</title>
+    <meta name="description" content="Get cash today for your valuable items at Sam's Pawn Shop in Griffin, GA. Licensed, insured, and trusted since 1999. Fast pawn loans, fair appraisals, secure storage.">
+    <meta name="keywords" content="pawn shop, Griffin GA, cash for jewelry, pawn loans, sell items, layaway, licensed pawn shop, Georgia pawn association, pawn shop near me">
+    <meta name="author" content="Sam's Pawn Shop">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.samspawnshop.com/">
+    <meta property="og:title" content="Sam's Pawn Shop - Fast Cash, Fair Deals, Trusted Since 1999">
+    <meta property="og:description" content="Get cash today for your valuable items. Licensed, insured, and trusted since 1999.">
+    <meta property="og:image" content="https://www.samspawnshop.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.samspawnshop.com/">
+    <meta property="twitter:title" content="Sam's Pawn Shop - Fast Cash, Fair Deals, Trusted Since 1999">
+    <meta property="twitter:description" content="Get cash today for your valuable items. Licensed, insured, and trusted since 1999.">
+    <meta property="twitter:image" content="https://www.samspawnshop.com/twitter-image.jpg">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PawnShop",
+        "name": "Sam's Pawn Shop",
+        "description": "Fast cash for valuable items. Licensed, insured, and trusted since 1999.",
+        "url": "https://www.samspawnshop.com",
+        "telephone": "+1-770-228-9333",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "312 W Taylor St",
+            "addressLocality": "Griffin",
+            "addressRegion": "GA",
+            "postalCode": "30223",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 33.2468,
+            "longitude": -84.2647
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-17:00"
+        ],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'treasure-gold': '#D4AF37',
+                        'deep-navy': '#1A2332',
+                        'rich-burgundy': '#8B2635',
+                        'emerald': '#2D5A27',
+                        'warm-cream': '#F5F5DC'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.8s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #D4AF37' },
+                            '100%': { boxShadow: '0 0 20px #D4AF37, 0 0 30px #D4AF37' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- React CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <style>
+        .epilepsy-safe {
+            animation: none !important;
+            transition: none !important;
+        }
+        
+        .epilepsy-safe * {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1A2332 0%, #2A3447 50%, #1A2332 100%);
+        }
+
+        .treasure-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #E6C866 50%, #D4AF37 100%);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-shadow-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-warm-cream font-sans text-deep-navy">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Main App Component
+        const { useState, useEffect, useRef } = React;
+
+        // Accessibility Context
+        const AccessibilityContext = React.createContext();
+
+        // Header Component
+        const Header = () => {
+            const [isMenuOpen, setIsMenuOpen] = useState(false);
+            const [isScrolled, setIsScrolled] = useState(false);
+
+            useEffect(() => {
+                const handleScroll = () => {
+                    setIsScrolled(window.scrollY > 50);
+                };
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            return (
+                <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                    isScrolled ? 'bg-deep-navy/95 backdrop-blur-md shadow-lg' : 'bg-deep-navy'
+                }`}>
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex justify-between items-center py-4">
+                            {/* Logo */}
+                            <div className="flex items-center space-x-3">
+                                <div className="w-12 h-12 bg-treasure-gold rounded-full flex items-center justify-center animate-glow">
+                                    <span className="text-deep-navy font-bold text-xl">$</span>
+                                </div>
+                                <div>
+                                    <h1 className="font-display font-bold text-2xl text-treasure-gold">Sam's Pawn Shop</h1>
+                                    <p className="text-xs text-treasure-gold/80">Trusted Since 1999</p>
+                                </div>
+                            </div>
+
+                            {/* Desktop Navigation */}
+                            <nav className="hidden md:flex items-center space-x-8">
+                                <a href="#home" className="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
+                                    <span>🏠</span>
+                                    <span>Home</span>
+                                </a>
+                                <a href="#services" className="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
+                                    <span>⚙️</span>
+                                    <span>Services</span>
+                                </a>
+                                <a href="#about" className="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
+                                    <span>ℹ️</span>
+                                    <span>About</span>
+                                </a>
+                                <a href="#contact" className="text-treasure-gold hover:text-white transition-colors duration-200 flex items-center space-x-1">
+                                    <span>📞</span>
+                                    <span>Contact</span>
+                                </a>
+                                <button className="bg-treasure-gold text-deep-navy px-6 py-2 rounded-full font-bold hover:bg-white transition-all duration-200 transform hover:scale-105">
+                                    💰 Get Cash Now
+                                </button>
+                            </nav>
+
+                            {/* Mobile Menu Button */}
+                            <button 
+                                className="md:hidden text-treasure-gold text-2xl"
+                                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                aria-label="Toggle menu"
+                            >
+                                {isMenuOpen ? '✕' : '☰'}
+                            </button>
+                        </div>
+
+                        {/* Mobile Menu */}
+                        {isMenuOpen && (
+                            <div className="md:hidden py-4 border-t border-treasure-gold/20">
+                                <nav className="flex flex-col space-y-4">
+                                    <a href="#home" className="text-treasure-gold hover:text-white transition-colors duration-200">🏠 Home</a>
+                                    <a href="#services" className="text-treasure-gold hover:text-white transition-colors duration-200">⚙️ Services</a>
+                                    <a href="#about" className="text-treasure-gold hover:text-white transition-colors duration-200">ℹ️ About</a>
+                                    <a href="#contact" className="text-treasure-gold hover:text-white transition-colors duration-200">📞 Contact</a>
+                                    <button className="bg-treasure-gold text-deep-navy px-6 py-2 rounded-full font-bold hover:bg-white transition-all duration-200">
+                                        💰 Get Cash Now
+                                    </button>
+                                </nav>
+                            </div>
+                        )}
+                    </div>
+                </header>
+            );
+        };
+
+        // Hero Section Component
+        const Hero = () => {
+            const [currentSlide, setCurrentSlide] = useState(0);
+            const heroSlides = [
+                {
+                    title: "Fast Cash for Your Treasures",
+                    subtitle: "Get instant cash for jewelry, electronics, tools, and more",
+                    cta: "Sell Now",
+                    bgColor: "from-treasure-gold to-yellow-400"
+                },
+                {
+                    title: "Secure Pawn Loans",
+                    subtitle: "Flexible terms, no credit check, instant approval",
+                    cta: "Get Loan",
+                    bgColor: "from-deep-navy to-rich-burgundy"
+                },
+                {
+                    title: "Trusted Since 1999",
+                    subtitle: "Licensed, insured, and serving Griffin with integrity",
+                    cta: "Learn More",
+                    bgColor: "from-emerald to-green-400"
+                }
+            ];
+
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+                }, 5000);
+                return () => clearInterval(interval);
+            }, []);
+
+            return (
+                <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+                    {/* Background Slides */}
+                    {heroSlides.map((slide, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-opacity duration-1000 ${
+                                index === currentSlide ? 'opacity-100' : 'opacity-0'
+                            }`}
+                        >
+                            <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor}`} />
+                            <div className="absolute inset-0 bg-black/40" />
+                        </div>
+                    ))}
+
+                    {/* Content */}
+                    <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h1 className="font-display font-bold text-5xl md:text-7xl mb-6 text-shadow">
+                                {heroSlides[currentSlide].title}
+                            </h1>
+                            <p className="text-xl md:text-2xl mb-8 text-white/90">
+                                {heroSlides[currentSlide].subtitle}
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <button className="bg-treasure-gold text-deep-navy px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-200 transform hover:scale-105 box-shadow-glow">
+                                    {heroSlides[currentSlide].cta}
+                                </button>
+                                <button className="border-2 border-treasure-gold text-treasure-gold px-8 py-4 rounded-full font-bold text-lg hover:bg-treasure-gold hover:text-deep-navy transition-all duration-200">
+                                    📞 Call (770) 228-9333
+                                </button>
+                            </div>
+                        </motion.div>
+
+                        {/* Trust Badges */}
+                        <div className="mt-12 flex flex-wrap justify-center gap-4">
+                            {[
+                                { icon: '🛡️', text: 'Licensed & Insured' },
+                                { icon: '🏆', text: 'Georgia Pawn Association' },
+                                { icon: '⭐', text: '4.9 Star Rating' },
+                                { icon: '🔒', text: 'Secure Storage' }
+                            ].map((badge, index) => (
+                                <div key={index} className="glass-effect rounded-full px-4 py-2 flex items-center space-x-2">
+                                    <span className="text-xl">{badge.icon}</span>
+                                    <span className="text-sm font-medium">{badge.text}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Scroll Indicator */}
+                    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                            <div className="w-1 h-3 bg-white rounded-full mt-2" />
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        // Services Section Component
+        const Services = () => {
+            const services = [
+                {
+                    icon: '💰',
+                    title: 'Pawn Loans',
+                    description: 'Get instant cash with flexible repayment terms. No credit check required.',
+                    features: ['Instant approval', 'No credit check', 'Flexible terms', 'Secure storage'],
+                    color: 'from-treasure-gold to-yellow-400'
+                },
+                {
+                    icon: '🛍️',
+                    title: 'Sell Items',
+                    description: 'Get fair market value for your valuable items. Cash payment on the spot.',
+                    features: ['Fair pricing', 'Cash payment', 'Professional appraisal', 'No pressure'],
+                    color: 'from-deep-navy to-rich-burgundy'
+                },
+                {
+                    icon: '📦',
+                    title: 'Layaway',
+                    description: 'Reserve items with a small deposit and pay over time. No interest charges.',
+                    features: ['Small deposit', 'No interest', 'Flexible payments', 'Secure storage'],
+                    color: 'from-emerald to-green-400'
+                }
+            ];
+
+            return (
+                <section id="services" className="py-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-deep-navy">
+                                Our Services
+                            </h2>
+                            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                                Professional pawn services designed to meet your financial needs with integrity and trust.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {services.map((service, index) => (
+                                <div
+                                    key={index}
+                                    className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+                                >
+                                    <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${service.color}`} />
+                                    <div className="p-8">
+                                        <div className="text-4xl mb-4">{service.icon}</div>
+                                        <h3 className="text-2xl font-bold mb-4 text-deep-navy">{service.title}</h3>
+                                        <p className="text-gray-600 mb-6">{service.description}</p>
+                                        <ul className="space-y-2">
+                                            {service.features.map((feature, idx) => (
+                                                <li key={idx} className="flex items-center space-x-2">
+                                                    <span className="text-treasure-gold">✓</span>
+                                                    <span className="text-gray-700">{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <button className="mt-6 w-full bg-deep-navy text-white py-3 rounded-lg font-bold hover:bg-rich-burgundy transition-colors duration-200">
+                                            Learn More
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        // Loan Application Form Component
+        const LoanForm = () => {
+            const [formData, setFormData] = useState({
+                name: '',
+                email: '',
+                phone: '',
+                itemType: '',
+                itemDescription: '',
+                estimatedValue: '',
+                loanAmount: ''
+            });
+
+            const handleInputChange = (e) => {
+                setFormData({
+                    ...formData,
+                    [e.target.name]: e.target.value
+                });
+            };
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                // Handle form submission
+                console.log('Form submitted:', formData);
+                alert('Thank you! We\'ll contact you within 24 hours.');
+            };
+
+            return (
+                <section className="py-20 bg-gradient-to-br from-deep-navy to-rich-burgundy text-white">
+                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-12">
+                            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">
+                                Get Your Loan Today
+                            </h2>
+                            <p className="text-xl text-white/80">
+                                Fill out the form below and we'll get back to you within 24 hours with a quote.
+                            </p>
+                        </div>
+
+                        <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-md rounded-2xl p-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block text-sm font-medium mb-2">Full Name *</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                        required
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold"
+                                        placeholder="Your full name"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium mb-2">Phone Number *</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleInputChange}
+                                        required
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold"
+                                        placeholder="(770) 555-0123"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium mb-2">Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold"
+                                        placeholder="your@email.com"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium mb-2">Item Type *</label>
+                                    <select
+                                        name="itemType"
+                                        value={formData.itemType}
+                                        onChange={handleInputChange}
+                                        required
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-treasure-gold"
+                                    >
+                                        <option value="">Select item type</option>
+                                        <option value="jewelry">Jewelry</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="tools">Tools</option>
+                                        <option value="watches">Watches</option>
+                                        <option value="musical">Musical Instruments</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div className="md:col-span-2">
+                                    <label className="block text-sm font-medium mb-2">Item Description *</label>
+                                    <textarea
+                                        name="itemDescription"
+                                        value={formData.itemDescription}
+                                        onChange={handleInputChange}
+                                        required
+                                        rows={3}
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold"
+                                        placeholder="Describe your item in detail..."
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium mb-2">Estimated Value</label>
+                                    <input
+                                        type="number"
+                                        name="estimatedValue"
+                                        value={formData.estimatedValue}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold"
+                                        placeholder="$500"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium mb-2">Desired Loan Amount</label>
+                                    <input
+                                        type="number"
+                                        name="loanAmount"
+                                        value={formData.loanAmount}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-treasure-gold"
+                                        placeholder="$300"
+                                    />
+                                </div>
+                            </div>
+                            <div className="mt-8 text-center">
+                                <button
+                                    type="submit"
+                                    className="bg-treasure-gold text-deep-navy px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-200 transform hover:scale-105"
+                                >
+                                    Submit Application
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            );
+        };
+
+        // Testimonials Component
+        const Testimonials = () => {
+            const testimonials = [
+                {
+                    name: 'Sarah M.',
+                    location: 'Griffin, GA',
+                    rating: 5,
+                    text: 'Sam\'s Pawn Shop helped me get cash quickly when I needed it most. They were professional, fair, and made the whole process easy.',
+                    item: 'Diamond Ring',
+                    date: 'December 2024'
+                },
+                {
+                    name: 'Mike R.',
+                    location: 'McDonough, GA',
+                    rating: 5,
+                    text: 'I\'ve been coming here for years. They always give me the best deals and their service is amazing.',
+                    item: 'MacBook Pro',
+                    date: 'November 2024'
+                },
+                {
+                    name: 'Jennifer L.',
+                    location: 'Hampton, GA',
+                    rating: 5,
+                    text: 'The staff is incredibly knowledgeable about jewelry. They helped me understand the value of my grandmother\'s pieces.',
+                    item: 'Antique Jewelry',
+                    date: 'October 2024'
+                }
+            ];
+
+            return (
+                <section className="py-20 bg-warm-cream">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-deep-navy">
+                                What Our Customers Say
+                            </h2>
+                            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                                Don't just take our word for it. Here's what our satisfied customers have to say.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {testimonials.map((testimonial, index) => (
+                                <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                                    <div className="flex items-center mb-4">
+                                        <div className="flex text-treasure-gold">
+                                            {[...Array(testimonial.rating)].map((_, i) => (
+                                                <span key={i}>⭐</span>
+                                            ))}
+                                        </div>
+                                        <span className="ml-2 text-sm text-gray-500">{testimonial.date}</span>
+                                    </div>
+                                    <blockquote className="text-gray-700 mb-4 italic">
+                        "{testimonial.text}"
+                    </blockquote>
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <div className="font-bold text-deep-navy">{testimonial.name}</div>
+                            <div className="text-sm text-gray-500">{testimonial.location}</div>
+                        </div>
+                        <div className="text-sm text-treasure-gold font-medium">
+                            {testimonial.item}
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+
+        <div className="text-center mt-12">
+            <button className="bg-deep-navy text-white px-8 py-3 rounded-full font-bold hover:bg-rich-burgundy transition-colors duration-200">
+                View More Reviews
+            </button>
+        </div>
+    </div>
+</section>
+            );
+        };
+
+        // Contact Component
+        const Contact = () => {
+            return (
+                <section id="contact" className="py-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-16">
+                            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4 text-deep-navy">
+                                Visit Us Today
+                            </h2>
+                            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                                Stop by our store or give us a call. We're here to help you get the best value for your items.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            {/* Contact Information */}
+                            <div className="space-y-8">
+                                <div className="bg-warm-cream rounded-2xl p-8">
+                                    <h3 className="text-2xl font-bold mb-6 text-deep-navy flex items-center space-x-2">
+                                        <span>📍</span>
+                                        <span>Location & Hours</span>
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div>
+                                            <p className="text-lg font-medium text-deep-navy">312 W Taylor St</p>
+                                            <p className="text-gray-600">Griffin, GA 30223</p>
+                                        </div>
+                                        <div>
+                                            <p className="font-medium text-deep-navy">Business Hours:</p>
+                                            <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                            <p className="text-gray-600">Saturday: 9:00 AM - 5:00 PM</p>
+                                            <p className="text-gray-600">Sunday: By Appointment</p>
+                                        </div>
+                                        <a
+                                            href="https://maps.google.com/?q=312+W+Taylor+St+Griffin+GA"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center space-x-2 bg-treasure-gold text-deep-navy px-4 py-2 rounded-full font-bold hover:bg-white transition-colors duration-200"
+                                        >
+                                            <span>🗺️</span>
+                                            <span>Get Directions</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="bg-warm-cream rounded-2xl p-8">
+                                    <h3 className="text-2xl font-bold mb-6 text-deep-navy flex items-center space-x-2">
+                                        <span>📞</span>
+                                        <span>Contact Information</span>
+                                    </h3>
+                                    <div className="space-y-4">
+                                        <div className="flex items-center space-x-3">
+                                            <span className="text-2xl">📱</span>
+                                            <div>
+                                                <p className="font-medium text-deep-navy">Phone</p>
+                                                <a href="tel:+17702289333" className="text-treasure-gold hover:text-deep-navy">
+                                                    (770) 228-9333
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center space-x-3">
+                                            <span className="text-2xl">✉️</span>
+                                            <div>
+                                                <p className="font-medium text-deep-navy">Email</p>
+                                                <a href="mailto:info@samspawnshop.com" className="text-treasure-gold hover:text-deep-navy">
+                                                    info@samspawnshop.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Map */}
+                            <div className="bg-warm-cream rounded-2xl p-8">
+                                <h3 className="text-2xl font-bold mb-6 text-deep-navy flex items-center space-x-2">
+                                    <span>🗺️</span>
+                                    <span>Find Us</span>
+                                </h3>
+                                <div className="bg-gray-300 rounded-lg h-96 flex items-center justify-center">
+                                    <div className="text-center">
+                                        <div className="text-4xl mb-4">🗺️</div>
+                                        <p className="text-gray-600">Interactive Map</p>
+                                        <p className="text-sm text-gray-500">Google Maps integration</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        // Footer Component
+        const Footer = () => {
+            return (
+                <footer className="bg-deep-navy text-treasure-gold py-12">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                            <div>
+                                <h4 className="font-bold text-lg mb-4">Contact Info</h4>
+                                <div className="space-y-2 text-sm">
+                                    <div>312 W Taylor St</div>
+                                    <div>Griffin, GA 30223</div>
+                                    <div className="font-medium">(770) 228-9333</div>
+                                    <div>info@samspawnshop.com</div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-lg mb-4">Quick Links</h4>
+                                <ul className="space-y-2 text-sm">
+                                    <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
+                                    <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+                                    <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
+                                    <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-lg mb-4">Services</h4>
+                                <ul className="space-y-2 text-sm">
+                                    <li><a href="#pawn-loans" className="hover:text-white transition-colors">Pawn Loans</a></li>
+                                    <li><a href="#sell-items" className="hover:text-white transition-colors">Sell Items</a></li>
+                                    <li><a href="#layaway" className="hover:text-white transition-colors">Layaway</a></li>
+                                    <li><a href="#appraisals" className="hover:text-white transition-colors">Appraisals</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-lg mb-4">Trust & Social</h4>
+                                <div className="space-y-4">
+                                    <div className="space-y-2 text-sm">
+                                        <div className="flex items-center space-x-2">
+                                            <span>🛡️</span>
+                                            <span>Licensed & Insured</span>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <span>🏆</span>
+                                            <span>Georgia Pawn Association</span>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <span>⭐</span>
+                                            <span>4.9 Star Rating</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="text-sm font-medium mb-2">Follow Us</div>
+                                        <div className="flex space-x-3">
+                                            <a href="#" className="hover:text-white transition-colors text-xl">📘</a>
+                                            <a href="#" className="hover:text-white transition-colors text-xl">📷</a>
+                                            <a href="#" className="hover:text-white transition-colors text-xl">⭐</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="border-t border-treasure-gold/20 pt-8">
+                            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                                <div className="flex items-center space-x-4">
+                                    <button 
+                                        onClick={() => window.scrollTo({top:0,behavior:'smooth'})} 
+                                        className="underline hover:text-white transition-colors"
+                                    >
+                                        Back to top
+                                    </button>
+                                    <span>|</span>
+                                    <span>© 2025 Sam's Pawn Shop. All rights reserved.</span>
+                                </div>
+                                <div className="flex space-x-4">
+                                    <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+                                    <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
+                                    <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            );
+        };
+
+        // Main App Component
+        const App = () => {
+            const [isEpilepsySafe, setIsEpilepsySafe] = useState(false);
+
+            return (
+                <AccessibilityContext.Provider value={{ isEpilepsySafe, setIsEpilepsySafe }}>
+                    <div className={isEpilepsySafe ? 'epilepsy-safe' : ''}>
+                        <Header />
+                        <Hero />
+                        <Services />
+                        <LoanForm />
+                        <Testimonials />
+                        <Contact />
+                        <Footer />
+                    </div>
+                </AccessibilityContext.Provider>
+            );
+        };
+
+        // Render the app
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html> 
